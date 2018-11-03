@@ -3835,28 +3835,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD
---- !u!61 &1793947501
-BoxCollider2D:
-=======
+
 --- !u!19719996 &1793947501
 TilemapCollider2D:
->>>>>>> fc581c7a925d13021843d74f0002033f933e48ba
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1793947497}
-<<<<<<< HEAD
-  m_Enabled: 0
-=======
   m_Enabled: 1
->>>>>>> fc581c7a925d13021843d74f0002033f933e48ba
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-<<<<<<< HEAD
+
   m_Offset: {x: 14.405001, y: -4.2700005}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3870,7 +3862,6 @@ TilemapCollider2D:
   serializedVersion: 2
   m_Size: {x: 69.01, y: 26.84}
   m_EdgeRadius: 0
-=======
   m_Offset: {x: 0, y: 0}
 --- !u!50 &1793947502
 Rigidbody2D:
@@ -3892,7 +3883,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
->>>>>>> fc581c7a925d13021843d74f0002033f933e48ba
 --- !u!1 &1825186715
 GameObject:
   m_ObjectHideFlags: 0
