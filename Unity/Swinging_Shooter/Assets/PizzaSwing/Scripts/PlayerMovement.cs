@@ -44,6 +44,10 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 
+
+    //=======================================================================
+    //=                        Limit Player Speed                           =
+    //=======================================================================
     private void LimitSpeed()
     {
         // get rigidbody velocity
@@ -52,20 +56,13 @@ public class PlayerMovement : MonoBehaviour {
         // get velocity vector (inlcuding the direction)
         Vector2 objectVelocityVector2 = _playersRigidbody2D.velocity;
 
-        Debug.Log("");
-
         // limit velocity
-        if (SpeedLimit >= objectVelocity)
+        if (objectVelocity >= SpeedLimit)
         {
             // normalize velocity vector and multiply with speed
             _playersRigidbody2D.velocity = objectVelocityVector2.normalized * SpeedLimit;
 
-            Debug.Log("player rb velocity = " + _playersRigidbody2D.velocity); 
         }
-
-
-
-       //Debug.Log("object velocity = " + _playersRigidbody2D.velocity.magnitude);
     }
 
 }
