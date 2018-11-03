@@ -9,6 +9,9 @@ TextureImporter:
     21300008: projectile2
     21300010: projectile3
     21300012: position marker
+    21300014: Boy
+    21300016: Boy_Weapon
+    21300018: Boy_Projectile
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -237,6 +240,66 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 26eb53f51bac441be858b6058e072860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boy
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 304
+        width: 13
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a82e8052bb074002a29c1d0749e06e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boy_Weapon
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 317
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7aff9da01302483090c77fa988f2935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boy_Projectile
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 317
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5b4b42b135c4764918096c4d63bc5d
       vertices: []
       indices: 
       edges: []
