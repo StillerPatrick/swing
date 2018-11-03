@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0370a6619dd4278a5f92d1d5ef337c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PizzaPoints: {fileID: 740888186}
+  BoyPoints: {fileID: 1778473704}
 --- !u!1 &32619688
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,8 +172,6 @@ GameObject:
   - component: {fileID: 32619693}
   - component: {fileID: 32619692}
   - component: {fileID: 32619691}
-  - component: {fileID: 32619690}
-  - component: {fileID: 32619689}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -179,39 +179,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &32619689
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 32619688}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!19719996 &32619690
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 32619688}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
 --- !u!1839735485 &32619691
 Tilemap:
   m_ObjectHideFlags: 0
@@ -2579,6 +2546,8 @@ GameObject:
   - component: {fileID: 1793947498}
   - component: {fileID: 1793947500}
   - component: {fileID: 1793947499}
+  - component: {fileID: 1793947502}
+  - component: {fileID: 1793947501}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3841,6 +3810,39 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1793947501
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793947497}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+--- !u!50 &1793947502
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793947497}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1825186715
 GameObject:
   m_ObjectHideFlags: 0
