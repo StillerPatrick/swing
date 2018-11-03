@@ -944,6 +944,7 @@ MonoBehaviour:
   player: {fileID: 881938660}
   trans: {fileID: 881938666}
   playerRigidBody: {fileID: 881938663}
+  distJoint: {fileID: 881938664}
 --- !u!50 &881938663
 Rigidbody2D:
   serializedVersion: 4
@@ -1299,6 +1300,7 @@ MonoBehaviour:
   SampleProjectile: {fileID: 915625621}
   ProjectileBucket: {fileID: 1945593796}
   ProjectileSpawn: {fileID: 1375288013}
+  player: {fileID: 0}
   ProjectileSprites:
   - {fileID: 21300006, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
   - {fileID: 21300008, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
