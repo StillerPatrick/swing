@@ -118,12 +118,19 @@ public class Hook : MonoBehaviour {
         rotatePlayerCW();
     }
 
+
+
+
 	// Use this for initialization
 	void Start () {
         LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.widthMultiplier = 0.2f;
-	}
+
+       // gameObject.GetComponent<DistanceJoint2D>().distance = (gameObject.GetComponent< - gameObject.GetComponent<Rigidbody2D>().position).magnitude;
+
+
+    }
 
     // Update is called once per frame
     void Update()
