@@ -26,6 +26,10 @@ public class PlayerWeaponShoot : MonoBehaviour
 
     // ------------------------- private ------------------------- 
     private Vector2 _aimDirection;
+
+    private Vector3 _stickInputControllerOne;
+    private Vector3 _stickInputControllerTwo;
+
     private Quaternion _aimRotation;
 
 
@@ -42,6 +46,9 @@ public class PlayerWeaponShoot : MonoBehaviour
 
         SampleProjectile.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
+        Debug.Log("1. joystick = " + Input.GetJoystickNames()[0]);
+
+        //Debug.Log(Input.GetJoystickNames()[0]);
     }
 
 
@@ -58,17 +65,23 @@ public class PlayerWeaponShoot : MonoBehaviour
     void Update()
     {
 
-        CrosshairsFollowMouse();
+        _stickInputControllerOne = new Vector3(Input.GetAxisRaw("Controller1_X"), -Input.GetAxisRaw("Controller1_Y"), 0);
+
+        //CrosshairsFollowMouse();
+
+        Debug.Log(_stickInputControllerOne);
+
+        CrosshairFollowStick();
+
 
 
 
         // shoot on button press
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Controller1_Shoot"))
         {
             Debug.Log("shoot");
             ShootWeapon();
         }
-
 
     }
 
@@ -94,7 +107,7 @@ public class PlayerWeaponShoot : MonoBehaviour
         // random int max is exclusive [min] (max) e.g range 0,3 --> outputs 0, 1, 2
         int randomNumber = UnityEngine.Random.Range(0, ProjectileSprites.Length);
 
-        Debug.Log("randNum = " + randomNumber);
+        //Debug.Log("randNum = " + randomNumber);
         // set projectile sprite
         newProjectile.GetComponent<SpriteRenderer>().sprite = ProjectileSprites[randomNumber];
 
@@ -107,6 +120,34 @@ public class PlayerWeaponShoot : MonoBehaviour
         // add impuse force
         newProjectile.GetComponent<Rigidbody2D>().AddForce(_aimDirection.normalized * ImpuleForce, ForceMode2D.Impulse);
     }
+
+
+    //=======================================================================
+    //=                       Crosshairs Follow Stick                       =
+    //=======================================================================
+    private void CrosshairFollowStick()
+    {
+        // controller 1
+
+        var controller1Direction = _stickInputControllerOne;
+
+        _aimDirection = controller1Direction;
+
+        float angle = Mathf.Atan2(_aimDirection.y, _aimDirection.x) * Mathf.Rad2Deg;
+
+        _aimRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+
+
+        // 
+        if (Mathf.Abs(_stickInputControllerOne.magnitude) >= 0.2f)
+        {
+            transform.rotation = _aimRotation;
+        }
+
+    }
+
+
 
 
 
