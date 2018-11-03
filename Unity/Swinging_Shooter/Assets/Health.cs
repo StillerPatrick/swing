@@ -21,6 +21,5 @@ public class Health : MonoBehaviour {
             hook.health -= 1;
         }
         slider.value = hook.health;
-        if (hook.health == 0) Destroy(player);
     }
 }
