@@ -16,7 +16,7 @@ public class Health : MonoBehaviour {
     void Update()
     {
         Hook hook = player.GetComponent<Hook>();
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.H))
         {
             hook.health -= 1;
         }

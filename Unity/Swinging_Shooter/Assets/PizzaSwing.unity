@@ -292,7 +292,7 @@ MonoBehaviour:
   - {fileID: 21300018, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
   - {fileID: 21300018, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
   - {fileID: 21300018, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
-  ImpuleForce: 10
+  ImpulseForce: 20
 --- !u!212 &122117931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1239,7 +1239,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843524142}
   m_LocalRotation: {x: -0, y: -0, z: 0.0000065296117, w: 1}
-  m_LocalPosition: {x: 0.498, y: 0.176, z: 172.53323}
+  m_LocalPosition: {x: 1.521, y: -0.135, z: 172.53323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 122117929}
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   - {fileID: 21300006, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
   - {fileID: 21300008, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
   - {fileID: 21300010, guid: b4d2e5f41b9af46818dac6c38e2f578a, type: 3}
-  ImpuleForce: 10
+  ImpulseForce: 20
 --- !u!1 &1032914074
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,7 +4007,7 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 14.405001, y: -4.2700005}
+  m_Offset: {x: 0, y: 0}
 --- !u!50 &1793947502
 Rigidbody2D:
   serializedVersion: 4
