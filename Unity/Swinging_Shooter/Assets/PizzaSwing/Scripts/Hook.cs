@@ -7,6 +7,7 @@ public class Hook : MonoBehaviour {
     int accelerator;
     private int maxVelocity = 70;
     private int acceleration = 25;
+    private int rotationSpeed = 2;
 
     public Vector2 radialVector()
     {
@@ -16,21 +17,22 @@ public class Hook : MonoBehaviour {
 
     }
 
-    public void rotatePlayerCCW()
+
+
+
+
+public void rotatePlayer()
     {
-        if (Input.GetKey("a"))
+    var horizontal = Input.GetAxis("horizontalPlayer1");
+    var vertical = Input.GetAxis("verticalPlayer1");
+
+        if (horizontal * horizontal + vertical * vertical > 0.1)
         {
-            gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 0, 4));
+            var angle = Mathf.Atan2(horizontal,vertical) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, -angle)), Time.deltaTime * rotationSpeed);
         }
     }
 
-    public void rotatePlayerCW()
-    {
-        if (Input.GetKey("d"))
-        {
-            gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 0, -4));
-        }
-    }
 
     public void accelerateCounterclockwise()
     {
@@ -114,8 +116,7 @@ public class Hook : MonoBehaviour {
             letGo();
         }
         setTarget();
-        rotatePlayerCCW();
-        rotatePlayerCW();
+        rotatePlayer();
     }
 
 	// Use this for initialization
